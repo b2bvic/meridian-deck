@@ -350,7 +350,7 @@ early stage. Warm to Wake County.</div>
                   <li style="font-size: 12pt;">Passed on Catawba &mdash; too early stage</li>
                   <li style="font-size: 12pt;">Implies preference for de-risked deals</li>
                 </ul>
-                <p style="margin: 10px 0 0 0;"><strong class="accent">Auto-Match:</strong> Wake County (scored &ge;60) &rarr; flagged for <code>/partner-match</code></p>
+                <p style="margin: 10px 0 0 0;"><strong class="accent">Auto-Match:</strong> Wake County (scored &ge;60) &rarr; flagged for <code class="cmd">/partner-match</code></p>
               </div>
             </div>
           </div>
@@ -391,7 +391,7 @@ early stage. Warm to Wake County.</div>
               <p style="margin: 0;"><strong>Qualification threshold: 60/100</strong><br>Sites scoring &ge;60 pass to Pipeline for deal structuring.</p>
             </div>
             <div class="callout callout-orange">
-              <p style="margin: 0;"><strong>Command:</strong> <code>/score-site Wake County</code><br>Gathers intel via web search, scores all 8 factors, writes profile.</p>
+              <p style="margin: 0;"><strong>Command:</strong> <code class="cmd">/score-site Wake County</code><br>Gathers intel via web search, scores all 8 factors, writes profile.</p>
             </div>
           </div>
         </div>
@@ -465,7 +465,7 @@ early stage. Warm to Wake County.</div>
             <tr><td><span class="tag tag-red">DEAD</span></td><td>Deal killed</td><td>Archive with lessons learned</td><td>&mdash;</td></tr>
           </table>
           <div class="callout callout-orange" style="margin-top: 12px;">
-            <p style="margin: 0;"><strong>Command:</strong> <code>/pipeline-status</code> &mdash; scans all deal files, computes weighted value per stage, flags stale deals (&gt;14 days no update), lists 7-day action items.</p>
+            <p style="margin: 0;"><strong>Command:</strong> <code class="cmd">/pipeline-status</code> &mdash; scans all deal files, computes weighted value per stage, flags stale deals (&gt;14 days no update), lists 7-day action items.</p>
           </div>
         </div>
         <aside class="notes">Stages are not arbitrary — each has defined entry criteria and clear ownership. Dead deals get archived with documented reasons, not deleted.</aside>
@@ -485,7 +485,7 @@ early stage. Warm to Wake County.</div>
             <tr><td><strong>Partner contacts &lt;30 days</strong></td><td>3+</td><td>2</td><td>&lt;2</td></tr>
             <tr><td><strong>Dead deals this quarter</strong></td><td>&lt;2</td><td>2&ndash;3</td><td>&gt;3</td></tr>
           </table>
-          <p class="text-lg" style="margin-top: 16px;">These metrics auto-compute from pipeline data. The <code>/pipeline-status</code> command generates a stage distribution table with total value, weighted value, and action items per deal. Stale deals (no update in &gt;14 days) get flagged automatically.</p>
+          <p class="text-lg" style="margin-top: 16px;">These metrics auto-compute from pipeline data. The <code class="cmd">/pipeline-status</code> command generates a stage distribution table with total value, weighted value, and action items per deal. Stale deals (no update in &gt;14 days) get flagged automatically.</p>
           <div class="callout callout-gray" style="margin-top: 10px;">
             <p style="margin: 0;"><strong>Weighted value formula:</strong> deal_value &times; probability. A $50M deal at 30% probability = $15M weighted.</p>
           </div>
@@ -499,7 +499,8 @@ early stage. Warm to Wake County.</div>
       <section id="deal-briefs">
         <h2>Deal Briefs: Cross-Domain Synthesis</h2>
         <div class="content">
-          <p class="text-muted" style="font-size: 13pt; margin-bottom: 10px;"><code>/deal-brief Catawba County</code> &mdash; pulls from Pipeline + Sites + Capital Partners to generate:</p>
+          <div class="user-input">/deal-brief Catawba County</div>
+          <p class="text-muted" style="font-size: 12pt; margin-bottom: 8px;">Pulls from Pipeline + Sites + Capital Partners to generate:</p>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div>
               <div class="domain-card green-top">
@@ -546,7 +547,8 @@ early stage. Warm to Wake County.</div>
       <section id="partner-match">
         <h2>Partner Matching: 6-Criterion Compatibility</h2>
         <div class="content">
-          <p class="text-muted" style="font-size: 13pt; margin-bottom: 8px;"><code>/partner-match Wake County</code> &mdash; cross-references site characteristics against every capital partner's criteria.</p>
+          <div class="user-input">/partner-match Wake County</div>
+          <p class="text-muted" style="font-size: 12pt; margin-bottom: 6px;">Cross-references site characteristics against every capital partner's criteria.</p>
           <table>
             <tr><th>Criterion</th><th>Weight</th><th>How It Scores</th></tr>
             <tr><td><strong>Deal size alignment</strong></td><td><strong>25%</strong></td><td>100 if within partner's range, linear taper &plusmn;20%</td></tr>
@@ -585,7 +587,8 @@ early stage. Warm to Wake County.</div>
       <section id="outreach">
         <h2>Outreach: 5-Touch, 21-Day Intelligence-Led</h2>
         <div class="content">
-          <p class="text-muted" style="font-size: 13pt; margin-bottom: 8px;"><code>/outreach-sequence Blackwell Capital</code> &mdash; reads partner profile, identifies what they care about, designs a sequence.</p>
+          <div class="user-input">/outreach-sequence Blackwell Capital</div>
+          <p class="text-muted" style="font-size: 12pt; margin-bottom: 6px;">Reads partner profile, identifies what they care about, designs a sequence.</p>
           <table>
             <tr><th>Touch</th><th>Day</th><th>Channel</th><th>Purpose</th><th>Content Strategy</th></tr>
             <tr><td><strong>1</strong></td><td>Day 1</td><td>Email</td><td>Intelligence-led intro</td><td>Lead with scored site matching their criteria. CTA: 15-min call</td></tr>
@@ -612,7 +615,8 @@ early stage. Warm to Wake County.</div>
       <section id="investment-memo">
         <h2>Investment Memoranda: The Crown Jewel</h2>
         <div class="content">
-          <p class="text-muted" style="font-size: 13pt; margin-bottom: 8px;"><code>/investment-memo Catawba County --partner Pinnacle</code> &mdash; pulls from <strong>all 5 data domains</strong> simultaneously.</p>
+          <div class="user-input">/investment-memo Catawba County --partner Pinnacle</div>
+          <p class="text-muted" style="font-size: 12pt; margin-bottom: 6px;">Pulls from <strong>all 5 data domains</strong> simultaneously.</p>
           <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;">
             <div class="domain-card green-top" style="padding: 10px 12px;">
               <h4 style="font-size: 11pt;"><i class="fa-solid fa-map-location-dot"></i> Sites</h4>
@@ -666,7 +670,8 @@ early stage. Warm to Wake County.</div>
       <section id="market-reports">
         <h2>Market Reports: County-Level Viability</h2>
         <div class="content">
-          <p class="text-muted" style="font-size: 13pt; margin-bottom: 8px;"><code>/market-report Wake County</code> &mdash; combines internal vault data with real-time web research.</p>
+          <div class="user-input">/market-report Wake County</div>
+          <p class="text-muted" style="font-size: 12pt; margin-bottom: 6px;">Combines internal vault data with real-time web research.</p>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div>
               <h3 style="border-bottom: none; padding-bottom: 0; font-size: 16pt;">Internal Sources</h3>
@@ -708,7 +713,8 @@ early stage. Warm to Wake County.</div>
       <section id="regulatory">
         <h2>Regulatory Watch: NCUC Filing Tracker</h2>
         <div class="content">
-          <p class="text-muted" style="font-size: 13pt; margin-bottom: 8px;"><code>/regulatory-watch --county Wake</code> or <code>/regulatory-watch --topic interconnection</code></p>
+          <div class="user-input">/regulatory-watch --county Wake</div>
+          <p class="text-muted" style="font-size: 12pt; margin-bottom: 6px;">Also accepts: <code class="cmd">/regulatory-watch --topic interconnection</code></p>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div>
               <h3 style="border-bottom: none; padding-bottom: 0; font-size: 16pt;">What It Searches</h3>
@@ -762,7 +768,8 @@ early stage. Warm to Wake County.</div>
       <section id="dashboard">
         <h2>Daily Dashboard: Full Status at a Glance</h2>
         <div class="content">
-          <p class="text-muted" style="font-size: 13pt; margin-bottom: 6px;"><code>/dashboard</code> &mdash; scans all 8 domains and generates:</p>
+          <div class="user-input">/dashboard</div>
+          <p class="text-muted" style="font-size: 12pt; margin-bottom: 4px;">Scans all 8 domains and generates:</p>
           <div class="code-block" style="font-size: 10pt; line-height: 1.45;">
 <span class="keyword">MERIDIAN INTELLIGENCE GROUP &mdash; DASHBOARD</span>    <span class="number">2026.02.07</span>
 
@@ -788,16 +795,16 @@ early stage. Warm to Wake County.</div>
         <div class="content">
           <table>
             <tr><th>Command</th><th>What It Does</th><th>Output Location</th><th>Data Sources</th></tr>
-            <tr><td><code>/score-site</code></td><td>Score site against 8-factor rubric</td><td><code>01 - Sites/</code></td><td>Sites + Web</td></tr>
-            <tr><td><code>/regulatory-watch</code></td><td>Track NCUC filings, Duke Energy queue</td><td><code>04 - Regulatory/</code></td><td>Web + Regulatory</td></tr>
-            <tr><td><code>/market-report</code></td><td>County-level market viability assessment</td><td><code>07 - Deliverables/Drafts/</code></td><td>Sites + Reg + Market + Web</td></tr>
-            <tr><td><code>/deal-brief</code></td><td>Deal summary from pipeline + site data</td><td><code>07 - Deliverables/Drafts/</code></td><td>Pipeline + Sites</td></tr>
-            <tr><td><code>/partner-match</code></td><td>Match sites to capital partner criteria</td><td><code>07 - Deliverables/Drafts/</code></td><td>Sites + Capital</td></tr>
-            <tr><td><code>/outreach-sequence</code></td><td>5-touch, 21-day email/call sequence</td><td><code>06 - Outreach/Drafts/</code></td><td>Capital + Sites</td></tr>
-            <tr><td><code>/investment-memo</code></td><td>Institutional-grade investment memorandum</td><td><code>07 - Deliverables/Drafts/</code></td><td><strong>All 5 domains + Web</strong></td></tr>
-            <tr><td><code>/intake</code></td><td>Process raw inbox notes into structured files</td><td>Domain folders</td><td>Inbox + Schema</td></tr>
-            <tr><td><code>/pipeline-status</code></td><td>Pipeline health metrics &amp; stage distribution</td><td>Inline display</td><td>Pipeline + Capital</td></tr>
-            <tr><td><code>/dashboard</code></td><td>Full daily status across all domains</td><td>Inline display</td><td>All domains</td></tr>
+            <tr><td><code class="cmd">/score-site</code></td><td>Score site against 8-factor rubric</td><td><code>01 - Sites/</code></td><td>Sites + Web</td></tr>
+            <tr><td><code class="cmd">/regulatory-watch</code></td><td>Track NCUC filings, Duke Energy queue</td><td><code>04 - Regulatory/</code></td><td>Web + Regulatory</td></tr>
+            <tr><td><code class="cmd">/market-report</code></td><td>County-level market viability assessment</td><td><code>07 - Deliverables/Drafts/</code></td><td>Sites + Reg + Market + Web</td></tr>
+            <tr><td><code class="cmd">/deal-brief</code></td><td>Deal summary from pipeline + site data</td><td><code>07 - Deliverables/Drafts/</code></td><td>Pipeline + Sites</td></tr>
+            <tr><td><code class="cmd">/partner-match</code></td><td>Match sites to capital partner criteria</td><td><code>07 - Deliverables/Drafts/</code></td><td>Sites + Capital</td></tr>
+            <tr><td><code class="cmd">/outreach-sequence</code></td><td>5-touch, 21-day email/call sequence</td><td><code>06 - Outreach/Drafts/</code></td><td>Capital + Sites</td></tr>
+            <tr><td><code class="cmd">/investment-memo</code></td><td>Institutional-grade investment memorandum</td><td><code>07 - Deliverables/Drafts/</code></td><td><strong>All 5 domains + Web</strong></td></tr>
+            <tr><td><code class="cmd">/intake</code></td><td>Process raw inbox notes into structured files</td><td>Domain folders</td><td>Inbox + Schema</td></tr>
+            <tr><td><code class="cmd">/pipeline-status</code></td><td>Pipeline health metrics &amp; stage distribution</td><td>Inline display</td><td>Pipeline + Capital</td></tr>
+            <tr><td><code class="cmd">/dashboard</code></td><td>Full daily status across all domains</td><td>Inline display</td><td>All domains</td></tr>
           </table>
         </div>
         <aside class="notes">10 commands covering the full lifecycle from raw note to investment memo. Each command knows which domains to read and where to write.</aside>
@@ -883,12 +890,14 @@ early stage. Warm to Wake County.</div>
       <!-- SLIDE 27: YOUR DAY                           -->
       <!-- ============================================ -->
       <section id="your-day">
-        <h2>Tim's Day: What Changes</h2>
+        <p class="role-title green">Chief Site Officer</p>
+        <h2>Tim Clarke</h2>
         <div class="content">
+          <p style="font-size: 13pt; color: var(--muted-color); margin-bottom: 10px;"><strong>Owns:</strong> Site identification &amp; evaluation &bull; 8-factor scoring rubric &bull; Regulatory monitoring (NCUC, Duke Energy) &bull; Market intelligence. Every parcel enters the pipeline through Tim's assessment.</p>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
             <div>
-              <h3 style="border-bottom: none; padding-bottom: 0; font-size: 18pt; color: var(--accent-red);">Before (Traditional)</h3>
-              <ul class="text-lg">
+              <h3 style="border-bottom: none; padding-bottom: 0; font-size: 15pt; color: var(--accent-red);">Before</h3>
+              <ul>
                 <li>Visit site, take notes on paper/phone</li>
                 <li>Return to office, type up findings</li>
                 <li>Research power/fiber/zoning manually</li>
@@ -900,8 +909,8 @@ early stage. Warm to Wake County.</div>
               </ul>
             </div>
             <div>
-              <h3 style="border-bottom: none; padding-bottom: 0; font-size: 18pt; color: var(--accent-green);">After (Meridian Vault)</h3>
-              <ul class="text-lg">
+              <h3 style="border-bottom: none; padding-bottom: 0; font-size: 15pt; color: var(--accent-green);">After</h3>
+              <ul>
                 <li>Visit site, type raw note in Obsidian</li>
                 <li>System classifies and structures it</li>
                 <li>System researches power/fiber/zoning</li>
@@ -924,12 +933,14 @@ early stage. Warm to Wake County.</div>
       <!-- SLIDE: MICHAEL'S DAY                         -->
       <!-- ============================================ -->
       <section id="michaels-day">
-        <h2>Michael's Day: What Changes</h2>
+        <p class="role-title amber">Chief Revenue Officer</p>
+        <h2>Michael Boscia</h2>
         <div class="content">
+          <p style="font-size: 13pt; color: var(--muted-color); margin-bottom: 10px;"><strong>Owns:</strong> Deal structuring &amp; pipeline management &bull; Capital partner relationships &bull; Outreach &amp; business development &bull; Investment memoranda. Every qualified site reaches capital through Michael's network.</p>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
             <div>
-              <h3 style="border-bottom: none; padding-bottom: 0; font-size: 18pt; color: var(--accent-red);">Before (Traditional)</h3>
-              <ul class="text-lg">
+              <h3 style="border-bottom: none; padding-bottom: 0; font-size: 15pt; color: var(--accent-red);">Before</h3>
+              <ul>
                 <li>Take partner meeting notes in email/CRM</li>
                 <li>Manually track who wants what deal size</li>
                 <li>Wait for Tim's site eval via email</li>
@@ -941,14 +952,14 @@ early stage. Warm to Wake County.</div>
               </ul>
             </div>
             <div>
-              <h3 style="border-bottom: none; padding-bottom: 0; font-size: 18pt; color: var(--accent-green);">After (Meridian Vault)</h3>
-              <ul class="text-lg">
+              <h3 style="border-bottom: none; padding-bottom: 0; font-size: 15pt; color: var(--accent-green);">After</h3>
+              <ul>
                 <li>Type partner meeting notes in Obsidian</li>
                 <li>System extracts criteria, risk tolerance, geography</li>
                 <li>Tim's scored sites appear automatically</li>
-                <li><code>/partner-match</code> ranks partners per deal</li>
-                <li><code>/outreach-sequence</code> drafts personalized emails</li>
-                <li><code>/investment-memo</code> generates from all domains</li>
+                <li><code class="cmd">/partner-match</code> ranks partners per deal</li>
+                <li><code class="cmd">/outreach-sequence</code> drafts personalized emails</li>
+                <li><code class="cmd">/investment-memo</code> generates from all domains</li>
                 <li>Pipeline tracked with health metrics + alerts</li>
                 <li>Every interaction logged, searchable, permanent</li>
               </ul>
@@ -982,7 +993,7 @@ early stage. Warm to Wake County.</div>
 
             <div class="stat-block" style="width: 80px;"><div class="stat-value" style="font-size: 22pt;">3</div><div class="stat-label">Week 1</div></div>
             <div class="box" style="margin: 0;">
-              <p style="margin: 0;"><strong>First Cross-Domain Deliverable</strong> &mdash; once 2&ndash;3 sites are scored, run <code>/deal-brief</code> or <code>/partner-match</code>. First output proves the fusion model works.</p>
+              <p style="margin: 0;"><strong>First Cross-Domain Deliverable</strong> &mdash; once 2&ndash;3 sites are scored, run <code class="cmd">/deal-brief</code> or <code class="cmd">/partner-match</code>. First output proves the fusion model works.</p>
             </div>
             <div class="tag tag-amber" style="margin-top: 8px;">TARGET</div>
 
@@ -1023,16 +1034,45 @@ early stage. Warm to Wake County.</div>
 
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
   <script>
+    function getDeviceConfig() {
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      var isPortrait = h > w;
+      var isPhone = Math.min(w, h) <= 500;
+
+      document.documentElement.classList.toggle('mobile', isPhone);
+      document.documentElement.classList.toggle('portrait', isPortrait);
+      document.documentElement.classList.toggle('landscape', !isPortrait);
+
+      if (isPhone && isPortrait) return { width: 640, height: 960 };
+      if (isPhone) return { width: 960, height: 540 };
+      return { width: 1280, height: 720 };
+    }
+
+    var initConfig = getDeviceConfig();
     Reveal.initialize({
-      width: 1280,
-      height: 720,
-      margin: 0,
+      width: initConfig.width,
+      height: initConfig.height,
+      margin: 0.04,
+      minScale: 0.1,
+      maxScale: 2.0,
       controls: true,
+      controlsTutorial: true,
       progress: true,
       slideNumber: true,
       hash: true,
       transition: 'slide',
-      center: false
+      center: false,
+      touch: true
+    });
+
+    var resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        var config = getDeviceConfig();
+        Reveal.configure({ width: config.width, height: config.height });
+      }, 300);
     });
   </script>
 </body>

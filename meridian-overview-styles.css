@@ -452,3 +452,298 @@ code {
   color: var(--primary-color);
   height: 3px;
 }
+
+/* =========================================== */
+/* USER INPUT vs OUTPUT DISTINCTION            */
+/* =========================================== */
+
+.user-input {
+  display: block;
+  background: var(--orange-bg);
+  border: 1px solid var(--orange-border);
+  border-left: 3px solid var(--orange);
+  border-radius: var(--box-radius);
+  padding: 8px 14px 8px 12px;
+  font-family: var(--mono-font);
+  font-size: 13pt;
+  color: var(--accent-amber);
+  margin: 6px 0;
+}
+
+.user-input::before {
+  content: '\276F\0020';
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+code.cmd {
+  background: var(--orange-bg);
+  color: var(--accent-amber);
+  border: 1px solid var(--orange-border);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 13pt;
+}
+
+/* Intent detection — "You Say" column */
+#intent-detection table td:first-child {
+  color: var(--accent-amber) !important;
+  font-style: italic;
+}
+
+#intent-detection table th:first-child {
+  color: var(--accent-amber) !important;
+}
+
+/* =========================================== */
+/* ROLE TITLE BADGE                            */
+/* =========================================== */
+
+.role-title {
+  display: inline-block;
+  font-size: 13pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 2px;
+}
+
+.role-title.green { color: var(--accent-green); }
+.role-title.amber { color: var(--accent-amber); }
+.role-title.cyan { color: var(--primary-color); }
+
+/* =========================================== */
+/* MOBILE RESPONSIVENESS                       */
+/* =========================================== */
+
+html.mobile .reveal .slides section {
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+html.mobile .reveal .slides section::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+html.mobile .reveal .slides section::-webkit-scrollbar-thumb {
+  background: var(--line-color);
+  border-radius: 3px;
+}
+
+/* ----- PORTRAIT PHONE (640x960 canvas) ----- */
+
+html.mobile.portrait .reveal .slides section {
+  padding: 20px 24px 16px 24px !important;
+}
+
+html.mobile.portrait .reveal h2 {
+  font-size: 22pt;
+  padding-bottom: 6px;
+}
+
+html.mobile.portrait .reveal h3 {
+  font-size: 16pt;
+}
+
+html.mobile.portrait .reveal p,
+html.mobile.portrait .reveal li,
+html.mobile.portrait .reveal .callout {
+  font-size: 13pt;
+  line-height: 1.4;
+}
+
+html.mobile.portrait .reveal table {
+  font-size: 10pt;
+}
+
+html.mobile.portrait .reveal table th {
+  font-size: 9pt;
+  padding: 5px 6px;
+}
+
+html.mobile.portrait .reveal table td {
+  padding: 4px 6px;
+  font-size: 10pt;
+}
+
+html.mobile.portrait .reveal .code-block {
+  font-size: 9pt;
+  line-height: 1.35;
+  padding: 8px 12px;
+}
+
+html.mobile.portrait .reveal code,
+html.mobile.portrait code.cmd {
+  font-size: 9pt;
+}
+
+html.mobile.portrait .user-input {
+  font-size: 10pt;
+  padding: 5px 10px 5px 8px;
+}
+
+html.mobile.portrait .reveal .stat-block .stat-value {
+  font-size: 20pt;
+}
+
+html.mobile.portrait .reveal .stat-block .stat-label {
+  font-size: 8pt;
+}
+
+html.mobile.portrait .domain-card {
+  padding: 8px 10px;
+}
+
+html.mobile.portrait .domain-card h4 {
+  font-size: 11pt;
+}
+
+html.mobile.portrait .domain-card p,
+html.mobile.portrait .domain-card li {
+  font-size: 10pt;
+}
+
+html.mobile.portrait .reveal .callout {
+  padding: 10px 14px;
+}
+
+html.mobile.portrait .flow-arrow {
+  font-size: 16pt;
+  padding: 2px 0;
+}
+
+html.mobile.portrait .reveal .slides section.section-divider h1 {
+  font-size: 32pt;
+}
+
+html.mobile.portrait .reveal .slides section.section-divider p {
+  font-size: 13pt;
+}
+
+html.mobile.portrait .title-tagline {
+  font-size: 12pt;
+}
+
+html.mobile.portrait .title-names {
+  font-size: 10pt;
+}
+
+html.mobile.portrait .title-logo {
+  font-size: 11pt;
+}
+
+html.mobile.portrait .reveal .tag {
+  font-size: 8pt;
+  padding: 1px 5px;
+}
+
+html.mobile.portrait .role-title {
+  font-size: 10pt;
+}
+
+/* Grid stacking — portrait phones */
+html.mobile.portrait [style*="grid-template-columns: repeat(4"] {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+html.mobile.portrait [style*="grid-template-columns: repeat(5"] {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+html.mobile.portrait [style*="grid-template-columns: repeat(6"] {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+html.mobile.portrait [style*="grid-template-columns: repeat(3"] {
+  grid-template-columns: 1fr 1fr !important;
+}
+
+html.mobile.portrait [style*="grid-template-columns: 1fr 1fr;"] {
+  grid-template-columns: 1fr !important;
+}
+
+html.mobile.portrait [style*="grid-template-columns: 1fr auto 1fr"] {
+  grid-template-columns: 1fr !important;
+}
+
+html.mobile.portrait [style*="grid-template-columns: 1fr 2fr"] {
+  grid-template-columns: 1fr !important;
+}
+
+/* ----- LANDSCAPE PHONE (960x540 canvas) ----- */
+
+html.mobile.landscape .reveal .slides section {
+  padding: 16px 30px 12px 30px !important;
+}
+
+html.mobile.landscape .reveal h2 {
+  font-size: 24pt;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+}
+
+html.mobile.landscape .reveal p,
+html.mobile.landscape .reveal li,
+html.mobile.landscape .reveal .callout {
+  font-size: 12pt;
+  line-height: 1.35;
+}
+
+html.mobile.landscape .reveal table {
+  font-size: 10pt;
+}
+
+html.mobile.landscape .reveal table th {
+  font-size: 9pt;
+  padding: 4px 6px;
+}
+
+html.mobile.landscape .reveal table td {
+  padding: 4px 6px;
+}
+
+html.mobile.landscape .reveal .code-block {
+  font-size: 9pt;
+  line-height: 1.3;
+  padding: 6px 10px;
+}
+
+html.mobile.landscape .reveal code,
+html.mobile.landscape code.cmd {
+  font-size: 9pt;
+}
+
+html.mobile.landscape .user-input {
+  font-size: 10pt;
+  padding: 4px 8px;
+}
+
+html.mobile.landscape .reveal .stat-block .stat-value {
+  font-size: 22pt;
+}
+
+html.mobile.landscape .domain-card {
+  padding: 8px 10px;
+}
+
+html.mobile.landscape .domain-card h4 {
+  font-size: 11pt;
+}
+
+html.mobile.landscape .domain-card p,
+html.mobile.landscape .domain-card li {
+  font-size: 10pt;
+}
+
+html.mobile.landscape .reveal .slides section.section-divider h1 {
+  font-size: 30pt;
+}
+
+html.mobile.landscape .reveal .slides section.section-divider p {
+  font-size: 12pt;
+}
+
+html.mobile.landscape .role-title {
+  font-size: 10pt;
+}
