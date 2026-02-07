@@ -146,39 +146,50 @@
       <!-- SLIDE 6: YOUR INBOX                          -->
       <!-- ============================================ -->
       <section id="your-inbox">
-        <h2>Your Inbox: How You Contribute</h2>
+        <h2>Your Inboxes: How You Both Contribute</h2>
         <div class="content">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+          <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px;">
             <div>
-              <h3 style="color: var(--accent-green); border-bottom: none; padding-bottom: 0;">What You Do</h3>
-              <ol class="text-lg">
-                <li>Open Obsidian</li>
-                <li>Navigate to <code>00 - Inbox/Tim/</code></li>
-                <li>Create a new note</li>
-                <li>Type what you know &mdash; in your own words</li>
-                <li>Save. Done.</li>
-              </ol>
-              <div class="callout callout-green" style="margin-top: 12px;">
-                <p style="margin: 0;"><strong>No terminal. No code. No API keys. No formatting.</strong> Just type naturally. One topic per note works best, but multi-topic notes are handled too.</p>
-              </div>
-            </div>
-            <div>
-              <h3 style="color: var(--muted-color); border-bottom: none; padding-bottom: 0;">Example Note</h3>
-              <div class="code-block" style="font-size: 12pt; line-height: 1.5;">200 acre site in Wake County near
+              <h3 style="color: var(--accent-green); border-bottom: none; padding-bottom: 0; font-size: 17pt;"><i class="fa-solid fa-map-location-dot"></i> Tim &mdash; Site Intelligence</h3>
+              <p style="font-size: 12pt; color: var(--muted-color); margin-bottom: 6px;">Drop notes in <code>00 - Inbox/Tim/</code></p>
+              <div class="code-block" style="font-size: 10pt; line-height: 1.45;">200 acre site in Wake County near
 Shearon Harris substation. Agricultural
 zoning. Duke Energy territory. Three
 fiber providers within 1 mile. Owner
 asking $15K/acre. Water access from
 Jordan Lake municipal line 2 miles
-south. Flat topography, no flood zone.
-County seems receptive to data center
-development based on recent rezoning
-approvals.</div>
-              <p class="text-muted" style="font-size: 11pt; margin-top: 6px;">This is the actual test note used during system build. See what it produced on the next slides.</p>
+south. Flat, no flood zone.</div>
+              <p class="text-muted" style="font-size: 10pt; margin-top: 4px;">Routes to <code>01 - Sites/</code> &rarr; scored profile</p>
+            </div>
+            <div style="display: flex; align-items: center; font-size: 11pt; color: var(--muted-color); padding: 0 4px;">
+              <div style="text-align: center;">
+                <p style="margin: 0;"><strong>Same<br>process.</strong></p>
+                <p style="margin: 8px 0 0 0;">Both<br>inboxes<br>scanned<br>every<br>4 hours.</p>
+              </div>
+            </div>
+            <div>
+              <h3 style="color: var(--accent-amber); border-bottom: none; padding-bottom: 0; font-size: 17pt;"><i class="fa-solid fa-building-columns"></i> Michael &mdash; Deal &amp; Capital Intel</h3>
+              <p style="font-size: 12pt; color: var(--muted-color); margin-bottom: 6px;">Drop notes in <code>00 - Inbox/Michael/</code></p>
+              <div class="code-block" style="font-size: 10pt; line-height: 1.45;">Met with Sarah Chen at Coastal
+Ventures yesterday. They're looking
+at NC data center plays, $20-50M
+range, prefer greenfield. Want 15%+
+IRR. She mentioned they passed on
+a Catawba deal last year - too
+early stage. Warm to Wake County.</div>
+              <p class="text-muted" style="font-size: 10pt; margin-top: 4px;">Routes to <code>03 - Capital Partners/</code> &rarr; partner profile</p>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 10px;">
+            <div class="callout callout-green" style="margin: 0;">
+              <p style="margin: 0; font-size: 12pt;"><strong>No terminal. No code. No API keys. No formatting.</strong> Just type what you know in your own words. Save. Done.</p>
+            </div>
+            <div class="callout callout-orange" style="margin: 0;">
+              <p style="margin: 0; font-size: 12pt;"><strong>Multi-topic notes handled.</strong> A note covering both a site visit and a partner conversation spawns files in both domains with cross-references.</p>
             </div>
           </div>
         </div>
-        <aside class="notes">This is Tim's actual interface. No learning curve. Write what you know in plain English. The system handles classification, structuring, and routing.</aside>
+        <aside class="notes">Both Tim and Michael have their own inbox folders. Same process, different intelligence types. Tim drops site data, Michael drops deal and partner intel. The system classifies and routes both.</aside>
       </section>
 
       <!-- ============================================ -->
@@ -300,6 +311,54 @@ approvals.</div>
           </div>
         </div>
         <aside class="notes">This is real output from the build test, not a mockup. Tim wrote 2 sentences. The system produced a full profile with frontmatter, strengths, gaps, pricing, and next actions.</aside>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SLIDE: MICHAEL'S OUTPUT                      -->
+      <!-- ============================================ -->
+      <section id="michael-output">
+        <h2>Michael's Input: What Partner Intel Produces</h2>
+        <div class="content">
+          <p class="text-muted" style="font-size: 11pt; margin-bottom: 4px;">From Michael's 3-sentence note about a partner meeting &rarr; structured capital partner profile in <code>03 - Capital Partners/</code></p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+              <h3 style="border-bottom: none; padding-bottom: 0; font-size: 16pt; color: var(--accent-amber);">Frontmatter (Machine-Readable)</h3>
+              <div class="code-block" style="font-size: 11pt; line-height: 1.5;"><span class="keyword">type::</span> <span class="string">capital_partner</span>
+<span class="keyword">domain::</span> <span class="string">capital</span>
+<span class="keyword">status::</span> <span class="string">warm</span>
+<span class="keyword">firm::</span> <span class="string">Coastal Ventures</span>
+<span class="keyword">contact::</span> <span class="string">Sarah Chen</span>
+<span class="keyword">deal_size_range::</span> <span class="number">$20M&ndash;$50M</span>
+<span class="keyword">target_irr::</span> <span class="number">15%+</span>
+<span class="keyword">geography::</span> <span class="string">NC</span>
+<span class="keyword">preference::</span> <span class="string">greenfield</span>
+<span class="keyword">last_contact::</span> <span class="number">2026.02.07</span>
+<span class="keyword">next_action::</span> <span class="string">Send Wake County brief</span></div>
+            </div>
+            <div>
+              <h3 style="border-bottom: none; padding-bottom: 0; font-size: 16pt; color: var(--accent-green);">Intelligence Extracted</h3>
+              <div class="box" style="font-size: 12pt; line-height: 1.5;">
+                <p style="margin: 0 0 6px 0;"><strong>Investment Criteria:</strong></p>
+                <ul style="margin: 0;">
+                  <li style="font-size: 12pt;">$20&ndash;$50M deal size range</li>
+                  <li style="font-size: 12pt;">Greenfield preferred</li>
+                  <li style="font-size: 12pt;">Target IRR: 15%+</li>
+                  <li style="font-size: 12pt;">NC geography &mdash; warm to Wake County</li>
+                </ul>
+                <p style="margin: 10px 0 6px 0;"><strong class="accent-red">Risk Signal:</strong></p>
+                <ul style="margin: 0;">
+                  <li style="font-size: 12pt;">Passed on Catawba &mdash; too early stage</li>
+                  <li style="font-size: 12pt;">Implies preference for de-risked deals</li>
+                </ul>
+                <p style="margin: 10px 0 0 0;"><strong class="accent">Auto-Match:</strong> Wake County (scored &ge;60) &rarr; flagged for <code>/partner-match</code></p>
+              </div>
+            </div>
+          </div>
+          <div class="callout callout-orange" style="margin-top: 8px;">
+            <p style="margin: 0;"><strong>What happened automatically:</strong> Relationship warmth set to "warm," contact date logged, risk tolerance inferred from Catawba rejection, geography match to existing scored sites triggered.</p>
+          </div>
+        </div>
+        <aside class="notes">Michael's raw note about a partner meeting becomes a structured profile with investment criteria, risk signals, and automatic site matching. The same 3 sentences that would have lived in an email thread now compound in the vault.</aside>
       </section>
 
       <!-- ============================================ -->
@@ -862,7 +921,48 @@ approvals.</div>
       </section>
 
       <!-- ============================================ -->
-      <!-- SLIDE 28: NEXT STEPS                         -->
+      <!-- SLIDE: MICHAEL'S DAY                         -->
+      <!-- ============================================ -->
+      <section id="michaels-day">
+        <h2>Michael's Day: What Changes</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+            <div>
+              <h3 style="border-bottom: none; padding-bottom: 0; font-size: 18pt; color: var(--accent-red);">Before (Traditional)</h3>
+              <ul class="text-lg">
+                <li>Take partner meeting notes in email/CRM</li>
+                <li>Manually track who wants what deal size</li>
+                <li>Wait for Tim's site eval via email</li>
+                <li>Manually match partners to deals</li>
+                <li>Draft outreach emails from scratch</li>
+                <li>Assemble investment memos in Word (weeks)</li>
+                <li>Pipeline lives in a spreadsheet</li>
+                <li>Relationship history scattered across inboxes</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="border-bottom: none; padding-bottom: 0; font-size: 18pt; color: var(--accent-green);">After (Meridian Vault)</h3>
+              <ul class="text-lg">
+                <li>Type partner meeting notes in Obsidian</li>
+                <li>System extracts criteria, risk tolerance, geography</li>
+                <li>Tim's scored sites appear automatically</li>
+                <li><code>/partner-match</code> ranks partners per deal</li>
+                <li><code>/outreach-sequence</code> drafts personalized emails</li>
+                <li><code>/investment-memo</code> generates from all domains</li>
+                <li>Pipeline tracked with health metrics + alerts</li>
+                <li>Every interaction logged, searchable, permanent</li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout callout-orange" style="margin-top: 12px;">
+            <p style="margin: 0;"><strong>Michael's leverage:</strong> The system turns relationship intelligence into structured data that compounds. Every partner meeting enriches the matching engine. Every deal brief gets faster because context already exists.</p>
+          </div>
+        </div>
+        <aside class="notes">Michael's shift mirrors Tim's — unstructured knowledge becomes permanent intelligence. But Michael's domain is relationships, so the compounding effect is in partner matching accuracy. After 10 logged interactions with a partner, the system knows their criteria cold.</aside>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SLIDE: NEXT STEPS                            -->
       <!-- ============================================ -->
       <section id="next-steps">
         <h2>From Here to Operational</h2>
@@ -876,7 +976,7 @@ approvals.</div>
 
             <div class="stat-block" style="width: 80px;"><div class="stat-value" style="font-size: 22pt;">2</div><div class="stat-label">Day 1+</div></div>
             <div class="box" style="margin: 0;">
-              <p style="margin: 0;"><strong>Start Dropping Real Notes</strong> &mdash; site visits, regulatory observations, market intel. Type into <code>00 - Inbox/Tim/</code>. System processes automatically every 4 hours.</p>
+              <p style="margin: 0;"><strong>Start Dropping Real Notes</strong> &mdash; Tim: site visits, regulatory intel into <code>00 - Inbox/Tim/</code>. Michael: partner meetings, deal intel into <code>00 - Inbox/Michael/</code>. Processed every 4 hours.</p>
             </div>
             <div class="tag tag-cyan" style="margin-top: 8px;">ONGOING</div>
 
